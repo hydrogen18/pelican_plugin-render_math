@@ -49,7 +49,7 @@ class PelicanMathJaxTreeProcessor(markdown.treeprocessors.Treeprocessor):
         # Add the mathjax script to the html document
         mathjax_script = etree.Element('script')
         mathjax_script.set('type','text/javascript')
-        mathjax_script.text = AtomicString(self.pelican_mathjax_extension.getConfig('mathjax_script'))
+        mathjax_script.text = AtomicString(self.pelican_mathjax_extension.getConfig('mathjax_script')[0])
         root.append(mathjax_script)
 
         # Reset the boolean switch to false so that script is only added
