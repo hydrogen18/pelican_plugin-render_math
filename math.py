@@ -141,7 +141,7 @@ def mathjax_for_markdown(pelicanobj, mathjax_settings):
 
     # Create the configuration for the markdown template
     config = {}
-    config['mathjax_script'] = [process_mathjax_script(mathjax_settings),'Mathjax JavaScript script']
+    config['mathjax_script'] = process_mathjax_script(mathjax_settings)
     
     # Instantiate markdown extension and append it to the current extensions
     try:
